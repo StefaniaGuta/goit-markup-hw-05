@@ -8,16 +8,14 @@
     --adress-color:#FFF;
 }
 .global-body body{
-    /*overflow-x: hidden;*/
-    width: 100vw;
+    overflow-x: hidden;
     font-family: 'Roboto', 'Courier New', Courier, monospace, sans-serif;
     background-color: var(--adress-color);
     text-decoration: none;
 }
 
 .container-header{
-    /*overflow-x: hidden;*/
-    width: 100vw;
+    overflow-x: hidden;
     background-color: var(--cut-color);
     border-bottom: 1px solid #ececec;
     display: flex;
@@ -131,8 +129,7 @@
 
 /*Studio page*/
 .effectiv-btn-section{
-    /*overflow-x: hidden;*/
-    width: 100vw;
+    overflow-x: hidden;
     background-image: linear-gradient(rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url("../Images/Background.png");
     background-repeat: no-repeat;
     background-position:center;
@@ -186,8 +183,7 @@
 }
 
 .description-section{
-    /*overflow-x: hidden;*/
-    width: 100vw;
+    overflow-x: hidden;
     padding: 94px 215px;
 }    
 
@@ -240,8 +236,7 @@
 }
 
 .ocupation-section{
-    /*overflow-x: hidden;*/
-    width: 100vw;
+    overflow-x: hidden;
     padding-bottom: 94px;
     background-color: var(--adress-color);
 }
@@ -278,8 +273,7 @@
 }
 
 .our-team-section{
-    /*overflow-x: hidden;*/
-    width: 100vw;
+    overflow-x: hidden;
     background-color: var(--button-color);
     padding: 0 215px 94px 215px;
 }
@@ -377,8 +371,7 @@
 
 .customers-container{
     background: var(--adress-color);
-    /*overflow-x: hidden;*/
-    width: 100vw;
+    overflow-x: hidden;
     display: block;
     padding: 94px 215px;
     margin-left: auto;
@@ -439,12 +432,12 @@
 
 /*Portofolio page*/
 .container-portofolio{
-    /*overflow-x: hidden;*/
-    width: 100vw;
+    overflow-x: hidden;
     display: block;
     padding: 94px 0;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 .button-navigation{
@@ -482,12 +475,12 @@
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
+
 .card-set-portofoliu{
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 30px;
     justify-content: center;
-    position: static;
 }
 
 .card-set-portofoliu .cards-prtf:hover{
@@ -540,8 +533,7 @@
 
 /*Footer section*/
 .footer-section{
-    /*overflow-x: hidden;*/
-    width: 100vw;
+    overflow-x: hidden;
     background-color: #2F303A;
     display: flex;
 }
@@ -655,30 +647,46 @@
     position: fixed;
     top: 0;
     left: 0;
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.20);
+    transform: scale(1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-content{
+    position: relative;
     width: 528px;
     height: 581px;
     flex-shrink: 0;
     border-radius: 4px;
     background: #FFF;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-    
 }
 
 .close-btn{
     position: absolute;
     top: 0;
-    right: 0px;
-    width: 30px;
-    height: 30px;
+    right: 0;
     background-color: #FFF;
-    color: #000000;
     cursor: pointer;
     border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    padding: 6px;
+    margin: 8px 8px 0 0;
+}
 
+.close-btn svg{
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
 }
 
 .is-hidden{
